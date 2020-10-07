@@ -30,38 +30,30 @@ void main()
 	i=del();
 	printf("\t:%d",i+1);
 	for(j=0;j<n;j++)
-{
-	       if (a[i][j]==1)
-	       insert(j);}
+	{
+	     if (a[i][j]==1)
+	     insert(j);}
      	}
 getch();
-   }
+}
 
 int del()
 {
    return q[++front];
 }
 
-
-
-
 void insert(int c)
 {
-	int i,count=0;
-  	for(i=0;i<k;i++)
-	
-          
-           {
-		if(ans[i]==c)
+		int i,count=0;
+			for(i=0;i<k;i++)
+				if(ans[i]==c)
+				{
+					count=1;
+					break;
+				}
+		if(count==0)
 		{
-			count=1;
-			break;
+				q[++rear]=c;
+				ans[k++]=c;
 		}
-	}
-if(count==0)
-{
-		q[++rear]=c;
-		ans[k++]=c;
-}
-
 }
